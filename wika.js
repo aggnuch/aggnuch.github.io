@@ -62,129 +62,139 @@ function makinig(a) {
 
 function susi(event) {
 	x = event.keyCode;
-	if (x == 49) {
-		mode = 1;
-		resetSettings();
-		document.getElementById("whatinfo").innerHTML = " kumpirmadong kaso";
-		document.getElementById("ano").innerHTML = " kumpirmadong kaso";
-		for (i = 0; i < run.length; i++) {
-			h = run[i];
-			if (stats[0][h] == 0) {
-				color = 256;
-			}
-			else {
-				color = 256 - Math.floor((Math.log(stats[0][h])/Math.log(35266)*256));
-			}
+	if (x == 49 || x == 97) { press1(); }
+	if (x == 50 || x == 98) { press2(); }
+	if (x == 51 || x == 99) { press3(); }
+	if (x == 52 || x == 100) { press4(); }
+	if (x == 53 || x == 101) { press5(); }
+	if (x == 54 || x == 102) { press6(); }
+	if (x == 72) { tulong(); }
+}
+
+function press1() {
+	mode = 1;
+	resetSettings();
+	document.getElementById("whatinfo").innerHTML = " kumpirmadong kaso";
+	document.getElementById("ano").innerHTML = " kumpirmadong kaso";
+	for (i = 0; i < run.length; i++) {
+		h = run[i];
+		if (stats[0][h] == 0) {
+			color = 256;
+		}
+		else {
+			color = 256 - Math.floor((Math.log(stats[0][h])/Math.log(35266)*256));
+		}
+		if (color < 16) {
+			color = String("0" + hex[color]);
+		}
+		fill("p"+h,"#ff"+color.toString(16)+color.toString(16));
+	}
+		fill("p251",document.getElementById("p25").style.fill);
+		fill("p1221",document.getElementById("p122").style.fill);
+}
+
+function press2() {
+	mode = 2;
+	resetSettings();
+	document.getElementById("whatinfo").innerHTML = " aktibong kaso";
+	document.getElementById("ano").innerHTML = " aktibong kaso";
+	for (i = 0; i < run.length; i++) {
+		h = run[i];
+		if (stats[1][h] == 0) {
+			fill("p"+h,"#b9b9b9");
+		}
+		else {
+			color = 256 - Math.floor((Math.log(stats[1][h])/Math.log(1801)*256));
 			if (color < 16) {
 				color = String("0" + hex[color]);
 			}
-			fill("p"+h,"#ff"+color.toString(16)+color.toString(16));
+			fill("p"+h,"#"+color.toString(16)+color.toString(16)+"ff");
 		}
-			fill("p251",document.getElementById("p25").style.fill);
-			fill("p1221",document.getElementById("p122").style.fill);
 	}
-	if (x == 50) {
-		mode = 2;
-		resetSettings();
-		document.getElementById("whatinfo").innerHTML = " aktibong kaso";
-		document.getElementById("ano").innerHTML = " aktibong kaso";
-		for (i = 0; i < run.length; i++) {
-			h = run[i];
-			if (stats[1][h] == 0) {
-				fill("p"+h,"#b9b9b9");
-			}
-			else {
-				color = 256 - Math.floor((Math.log(stats[1][h])/Math.log(1801)*256));
-				if (color < 16) {
-					color = String("0" + hex[color]);
-				}
-				fill("p"+h,"#"+color.toString(16)+color.toString(16)+"ff");
-			}
+		fill("p251",document.getElementById("p25").style.fill);
+		fill("p1221",document.getElementById("p122").style.fill);
+}
+
+function press3() {
+	mode = 3;
+	resetSettings();
+	document.getElementById("whatinfo").innerHTML = " nakarekober";
+	document.getElementById("ano").innerHTML = " nakarekober";
+	for (i = 0; i < run.length; i++) {
+		h = run[i];
+		if (stats[2][h] == 0) {
+			fill("p"+h,"#b9b9b9");
 		}
-			fill("p251",document.getElementById("p25").style.fill);
-			fill("p1221",document.getElementById("p122").style.fill);
-	}
-	if (x == 51) {
-		mode = 3;
-		resetSettings();
-		document.getElementById("whatinfo").innerHTML = " nakarekober";
-		document.getElementById("ano").innerHTML = " nakarekober";
-		for (i = 0; i < run.length; i++) {
-			h = run[i];
-			if (stats[2][h] == 0) {
-				fill("p"+h,"#b9b9b9");
+		else {
+			color = 256 - Math.floor((Math.log(stats[2][h])/Math.log(33129)*256));
+			if (color < 16) {
+				color = String("0" + hex[color]);
 			}
-			else {
-				color = 256 - Math.floor((Math.log(stats[2][h])/Math.log(33129)*256));
-				if (color < 16) {
-					color = String("0" + hex[color]);
-				}
-				fill("p"+h,"#"+color.toString(16)+"ff"+color.toString(16));
-			}
+			fill("p"+h,"#"+color.toString(16)+"ff"+color.toString(16));
 		}
-			fill("p251",document.getElementById("p25").style.fill);
-			fill("p1221",document.getElementById("p122").style.fill);
 	}
-	if (x == 52) {
-		mode = 4;
-		resetSettings();
-		document.getElementById("whatinfo").innerHTML = " namatay";
-		document.getElementById("ano").innerHTML = " namatay";
-		for (i = 0; i < run.length; i++) {
-			h = run[i];
-			if (stats[3][h] == 0) {
-				fill("p"+h,"#ffffff");
-			}
-			else {
-				color = 256 - Math.floor((Math.log(stats[3][h]+1)/Math.log(1325)*256));
-				if (color < 16) {
-					color = String("0" + hex[color]);
-				}
-				fill("p"+h,"#"+color.toString(16)+color.toString(16)+color.toString(16));
-			}
+		fill("p251",document.getElementById("p25").style.fill);
+		fill("p1221",document.getElementById("p122").style.fill);
+}
+
+function press4() {
+	mode = 4;
+	resetSettings();
+	document.getElementById("whatinfo").innerHTML = " namatay";
+	document.getElementById("ano").innerHTML = " namatay";
+	for (i = 0; i < run.length; i++) {
+		h = run[i];
+		if (stats[3][h] == 0) {
+			fill("p"+h,"#ffffff");
 		}
-			fill("p251",document.getElementById("p25").style.fill);
-			fill("p1221",document.getElementById("p122").style.fill);
-	}
-	if (x == 53) {
-		mode = 5;
-		resetSettings();
-		document.getElementById("whatinfo").innerHTML = " bagong kaso noong ika-18 ng Nobyembre, 2020";
-		document.getElementById("ano").innerHTML = " bagong kaso noong ika-18 ng Nobyembre, 2020";
-		for (i = 0; i < run.length; i++) {
-			h = run[i];
-			if (stats[4][h] == 0) {
-				fill("p"+h,"#b9b9b9");
+		else {
+			color = 256 - Math.floor((Math.log(stats[3][h]+1)/Math.log(1325)*256));
+			if (color < 16) {
+				color = String("0" + hex[color]);
 			}
-			else {
-				color = Math.floor((Math.log(stats[4][h]+1)/Math.log(81)*100));
-				fill("p"+h,"rgba(255,128,0,"+(color/100));
-			}
+			fill("p"+h,"#"+color.toString(16)+color.toString(16)+color.toString(16));
 		}
-			fill("p251",document.getElementById("p25").style.fill);
-			fill("p1221",document.getElementById("p122").style.fill);
 	}
-	if (x == 54) {
-		mode = 6;
-		resetSettings();
-		document.getElementById("whatinfo").innerHTML = "% ng mga kumpirmadong kaso ay aktibo";
-		document.getElementById("ano").innerHTML = "porsyento ng kumpirmadong kaso na aktibo";
-		for (i = 0; i < run.length; i++) {
-			h = run[i];
-			if (stats[1][h] == 0) {
-				fill("p"+h,"#b9b9b9");
-			}
-			else {
-				color = Math.floor(Math.log((stats[1][h]+1)/stats[0][h]*100)/Math.log(36600/185)*100);
-				fill("p"+h,"rgba(204,0,255,"+(color/100));
-			}
+		fill("p251",document.getElementById("p25").style.fill);
+		fill("p1221",document.getElementById("p122").style.fill);
+}
+
+function press5() {
+	mode = 5;
+	resetSettings();
+	document.getElementById("whatinfo").innerHTML = " bagong kaso noong ika-18 ng Nobyembre, 2020";
+	document.getElementById("ano").innerHTML = " bagong kaso noong ika-18 ng Nobyembre, 2020";
+	for (i = 0; i < run.length; i++) {
+		h = run[i];
+		if (stats[4][h] == 0) {
+			fill("p"+h,"#b9b9b9");
 		}
-			fill("p251",document.getElementById("p25").style.fill);
-			fill("p1221",document.getElementById("p122").style.fill);
+		else {
+			color = Math.floor((Math.log(stats[4][h]+1)/Math.log(81)*100));
+			fill("p"+h,"rgba(255,128,0,"+(color/100));
+		}
 	}
-	if (x == 72) {
-		tulong();
+		fill("p251",document.getElementById("p25").style.fill);
+		fill("p1221",document.getElementById("p122").style.fill);
+}
+
+function press6() {
+	mode = 6;
+	resetSettings();
+	document.getElementById("whatinfo").innerHTML = "% ng mga kumpirmadong kaso ay aktibo";
+	document.getElementById("ano").innerHTML = "porsyento ng kumpirmadong kaso na aktibo";
+	for (i = 0; i < run.length; i++) {
+		h = run[i];
+		if (stats[1][h] == 0) {
+			fill("p"+h,"#b9b9b9");
+		}
+		else {
+			color = Math.floor(Math.log((stats[1][h]+1)/stats[0][h]*100)/Math.log(36600/185)*100);
+			fill("p"+h,"rgba(204,0,255,"+(color/100));
+		}
 	}
+		fill("p251",document.getElementById("p25").style.fill);
+		fill("p1221",document.getElementById("p122").style.fill);
 }
 
 function tulong() {
