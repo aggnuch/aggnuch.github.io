@@ -1,0 +1,41 @@
+html, body {
+	width: 100%;
+	margin: 0px;
+	background-color: #fafafa;
+}
+
+.prov:hover {
+	opacity: 0.5;
+	transition: 0.2s;
+}
+
+#display {
+	float: right;
+	position: fixed;
+	right: 0%;
+	width: 400px;
+	height: auto;
+	background-color: yellow;
+	border: 5px solid black;
+	font-family: Raleway;
+	font-size: 30px;
+	padding: 20px;
+	line-height: 1.5;
+	display: none;
+}
+
+#provname {
+	font-weight: bold;
+	font-size: 30px;
+}
+
+#tulong {
+	padding: 10px;
+	font-family: Raleway;
+	font-size: 24px;
+	margin-top: 10px;
+}
+
+#tulong:hover {
+	cursor: pointer;
+}
