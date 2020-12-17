@@ -1,0 +1,39 @@
+<!html>
+	<head>
+		<title>Juls Power Calculator</title>
+		<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Open+Sans&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Raleway&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Pattaya&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Kite+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Carter+One&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Sriracha&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="calcu.css">
+		<script src="data.js"></script>
+		<script src="calcu.js"></script>
+	</head>
+	<body>
+	<center>
+		<div id="calcu">
+		<p id="welcome">Welcome to Juls's power calculator! Type in a whole number (as large as you want) in the first box, and in the second box a whole number between 2 and 99. The calculator will then raise the first number to the power of whatever the second number is, and will give the exact answer. Try it!</p>
+			<input type="string" id="cand"></input><br>
+			<input type="string" id="lier"></input><br>
+			<button onclick="power()" id="buttonPower">Let's Go!</button>
+		</div>
+	</center>
+		<div id="show">
+			<div id="resultHolder">
+				The answer is <p style="word-wrap:break-word" id="result"></p>
+				<button id="buttonOK" onclick="verification()">OK</button>
+			</div>
+		</div>
+	<center>
+		<div id="notes">
+			<p class="surprise" id="lujzaise1">Because of you, this year has been easier for me to cope despite the challenges we face.</p>
+			<p class="surprise" id="lujzaise2"><span id="placeName"></span>, thank you for being a part of my 2020!!!</p>
+			<div id="noteHolder"><p id="lujzaise"></p></div>
+		</div>
+	</center>
+	</body>
+</html>
