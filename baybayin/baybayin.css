@@ -3,6 +3,11 @@ html, body {
 	height: 100%;
 }
 
+@font-face {
+	font-family: "Baybayin Sisil";
+	src: url("https://aggnuch.github.io/baybayin/baybayin_sisil_07012018_1032_unicode-webfont.woff") format("woff");
+}
+
 body {
 	font-family: Baybayin Sisil;
 	font-size: 69px;
