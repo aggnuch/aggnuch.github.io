@@ -1,0 +1,31 @@
+html, body {
+	margin: 0px;
+	height: 100%;
+}
+
+body {
+	font-family: Garamond;
+	background-color: #f0f0f0;
+}
+
+.holder {
+	margin: 0px;
+	height: 100%;
+	position: relative;
+}
+
+#left, #right {
+	display: inline-block;
+}
+
+#left {
+	background-color: #ff3333;
+	min-height: 100%;
+	max-height: 100%;
+}
+
+#right {
+	background-color: #ffff33;
+	min-height: 100%;
+	max-height: 100%;
+}
