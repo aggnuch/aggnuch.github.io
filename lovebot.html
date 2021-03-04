@@ -1,14 +1,37 @@
 <!DOCTYPE html>
 	<head>
-		<title>juls's lovebot</title>
+		<title>spread some love!</title>
 		<link rel="stylesheet" href="lovebot.css">
 		<link rel="preconnect" href="https://fonts.gstatic.com">
 		<link href="https://fonts.googleapis.com/css2?family=Euphoria+Script&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Kalam&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Cookie&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Handlee&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bad+Script&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Shadows+Into+Light+Two&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Delius&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Grand+Hotel&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Rouge+Script&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Margarine&display=swap" rel="stylesheet">
+		<link href="https://fonts.googleapis.com/css2?family=Bellota+Text&display=swap" rel="stylesheet">
 		<script src="lovebot.js"></script>
 	</head>
 	<body onload="generateSentence()">
 		<div class="absolute" id="sentenceHolder">
-			<p class="absolute" id="sentence">You're like the sun that shines, my love.</p>
+			<div id="op"></div>
+			<p class="absolute" id="sentence"></p>
+		</div>
+		<div id="likeSee">
+			<p onclick="alerted()">Like what you see?</p>
+		</div>
+		<div id="alertHolder">
+			<div class="absolute" id="alert">
+				<b>Image Source:</b><p id="imgSrc"></p>
+				<b>Font Used:</b><p id="fontSrc"></p>
+				<p id="close" onclick="isara()">Close</p>
+			</div>
 		</div>
 	</body>
 </html>
