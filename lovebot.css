@@ -1,0 +1,46 @@
+html, body {
+	height: 100%;
+	margin: 0px;
+}
+
+body {
+	background-color: #9be0f1;
+}
+
+#sentenceHolder {
+	background-position: 50% 50%;
+	background-repeat: no-repeat;
+	width: 640px;
+	height: 640px;
+}
+
+#sentence {
+	font-family: Euphoria Script;
+	font-size: 60px;
+	text-shadow: 2px 2px white;
+	text-align: center;
+	margin: 0px;
+	width: 65%;
+}
+
+.absolute {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+@media screen and (orientation:portrait)
+{
+}
+
+/* 
+
+red - #f898a4
+orange - #fcda9c
+yellow - #f7faa1
+green - #b4f6a4
+blue - #9be0f1
+purple - #a2aceb
+
+*/
