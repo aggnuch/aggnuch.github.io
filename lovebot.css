@@ -3,26 +3,29 @@ html, body {
 	margin: 0px;
 }
 
-body {
-	background-color: #9be0f1;
-}
-
 #sentenceHolder {
 	background-repeat: no-repeat;
-	width: 640px;
-	height: 640px;
+	width: 300px;
+	height: 300px;
+	position: relative;
+	border-radius: 20px;
+}
+
+#holder {
+	width: 350px;
+	height: 350px;
 }
 
 #op {
 	background-color: rgba(255,255,255,0.25);
-	width: 640px;
-	height: 640px;
+	width: 300px;
+	height: 300px;
 	position: absolute;
+	border-radius: 20px;
 }
 
 #sentence {
-	font-family: Euphoria Script;
-	font-size: 60px;
+	font-size: 32px;
 	text-shadow: 2px 2px white;
 	text-align: center;
 	margin: 0px;

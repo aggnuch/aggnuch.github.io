@@ -10,7 +10,7 @@ function generateSentence() {
 	quoteNumber = randomize(0,quoteList.length-1);
 	fontNumber = randomize(0,fontList.length-1);
 	colorNumber = randomize(0,5);
-	document.body.style.backgroundColor = colorList[colorNumber];
+	document.getElementById("holder").style.backgroundColor = colorList[colorNumber];
 	if (Number.isInteger(imageList[imageNumber].id)) { 
 		source = 'https://images.pexels.com/photos/' + imageList[imageNumber].id + "/pexels-photo-" + imageList[imageNumber].id + ".jpeg?auto=compress&cs=tinysrgb&dpr=3&h=750&w=1260";
 	}
