@@ -35,6 +35,7 @@ body {
 	bottom: 2%;
 	font-family: Grand Hotel;
 	font-size: 30px;
+	display: none;
 }
 
 #likeSee p {
