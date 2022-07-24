@@ -1,0 +1,9 @@
+body, html {
+	margin: 0px;
+	height: 100%;
+}
+
+#meowCounter {
+	font-size: 69px;
+	font-family: Arial Rounded MT;
+}
