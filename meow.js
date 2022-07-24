@@ -1,4 +1,4 @@
-import { jsPDF } from "jspdf";
+import { jsPDF } from "https://unpkg.com/jspdf@latest/dist/jspdf.umd.min.js";
 
 const ria = new jsPDF({
 	orientation: "portrait",
