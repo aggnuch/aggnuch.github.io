@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+	<head>
+		<title>Limahan</title>
+		<link rel="stylesheet" href="limahan.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+		<meta name="viewport" content="user-scalable=no" />
+		<script src="limahan.js"></script>
+	</head>
+	<body onload="hot()">
+		<center><div id="levelHolderField">
+			<div id="menuField">
+				<div id="menuBackground">
+				<span class="absolutee">
+					<p class="menuTitle"><span class="letter">LIMAH</span>AN</p>
+					<div id="menuHighScore">
+						<p id="menuIyong">Iyong high score:</p>
+						<b><p id="menuHSText"></p></b>
+					</div>
+					<img src="play.png" id="menuPlay" onclick="startGame()">
+					<img src="stats.png" id="menuStats">
+					<img src="help.png" id="menuHelp" onclick="menuHelp()">
+				</span>
+				</div>
+			</div>
+			<div id="instructionsField">
+				<div id="instructionsField0"><span class="absolutee">
+					<p id="panuto">PANUTO</p>
+					<p class="instructionP">Simple lamang ang larong ito.</p>
+					<p class="instructionP">Bumuo ng mga salitang may limang letra sa wikang Filipino.</p>
+					<p class="instructionP">Mula sa ibinigay na letra sa ibaba, kaya mo bang buuin ang salita?</p>
+					<p class="instructionP">Isipin mo lang ang sagot, pero mamaya pipindutin mo ang mga letra upang mabuo ang sagot.</p>
+					<div class="circleWordDemo demo1"><span class="absolutee">A</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">T</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">L</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">R</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">E</span></div>
+					<p class="instructionP">Kuha? Pindutin ang "Susunod" sa baba.</p>
+					<p id="susunod" onclick="gidle()">Susunod</p></span>
+				</div>
+				<div id="instructionsField1"><span class="absolutee">
+					<p id="panuto">PANUTO</p>
+					<p class="instructionP">Sana nakuha mo ang tamang sagot. Ang sagot ay:</p>
+					<div class="circleWordDemo demo1"><span class="absolutee">L</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">E</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">T</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">R</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">A</span></div>
+					<p class="instructionP">Madali lang, hindi ba? Pindutin ang "Susunod" sa baba.</p>
+					<p id="susunod" onclick="gidle()">Susunod</p></span>
+				</div>
+				<div id="instructionsField2"><span class="absolutee">
+					<p id="panuto">PANUTO</p>
+					<p class="instructionP">Saglit. May isa pang twist pero simple lang din.</p>
+					<p class="instructionP">Ang <b>NG</b> ay iisang letra lamang sa larong ito.</p>
+					<p class="instructionP">Gamit iyan, ano kaya ang salita sa ibaba?</p>
+					<div class="circleWordDemo demo2"><span class="absolutee">NG</span></div>
+					<div class="circleWordDemo demo2"><span class="absolutee">O</span></div>
+					<div class="circleWordDemo demo2"><span class="absolutee">A</span></div>
+					<div class="circleWordDemo demo2"><span class="absolutee">T</span></div>
+					<div class="circleWordDemo demo2"><span class="absolutee">N</span></div>
+					<p class="instructionP">Kuha? Pindutin ang "Susunod" sa baba.</p>
+					<p id="susunod" onclick="gidle()">Susunod</p></span>
+				</div>
+				<div id="instructionsField3"><span class="absolutee">
+					<p id="panuto">PANUTO</p>
+					<p class="instructionP">Huli na talaga ito. Mayroon ka lamang <b>20</b> segundo upang makabuo ng salita.</p>
+					<p class="instructionP">Madadagdagan ka ng segundo kapag nakabuo ka ng tamang salita, at mababawasan ka ng segundo kung mali ang salita.</p>
+					<p class="instructionP">Kapag nagkamali ka ng pindot habang hindi pa buo ang salita, maaari mong pindutin ang kahit anong bilog sa taas upang ulitin ang pagbuo.</p>
+					<p class="instructionP">Kuha? Pwede ka nang magsimula. Pindutin ang "Susunod" sa baba.</p>
+					<p id="susunod" onclick="gidle()">Susunod</p></span>
+				</div>
+			</div>
+			<div id="gameOverField">
+				<span class="absolutee">
+					<p id="cocoMartin">TAPOS NA!</p>
+					<p id="pwedeNa">Nagawa mo sana ang salitang:</p>
+					<p class="siritCircle" id="siritCircle1"><span id="sc1" class="absolutee">A</span></p>
+					<p class="siritCircle" id="siritCircle2"><span id="sc2" class="absolutee">A</span></p>
+					<p class="siritCircle" id="siritCircle3"><span id="sc3" class="absolutee">A</span></p>
+					<p class="siritCircle" id="siritCircle4"><span id="sc4" class="absolutee">A</span></p>
+					<p class="siritCircle" id="siritCircle5"><span id="sc5" class="absolutee">A</span></p>
+					<hr id="iskorHr">
+					<p id="iskorText">Iskor</p>
+					<p id="iskor">0</p>
+					<p id="nhs">BAGONG<br>HIGH SCORE!</p>
+					<img src="balik.png" id="gameOverBack" onclick="startMenu()">
+				</span>
+			</div>
+			<div id="playingField">
+				<p id="score">0</p>
+				<img src="time.png" id="timeIcon">
+				<div id="timeShape"></div>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle1"><span id="ac1" class="absolutee"></span></p>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle2"><span id="ac2" class="absolutee"></span></p>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle3"><span id="ac3" class="absolutee"></span></p>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle4"><span id="ac4" class="absolutee"></span></p>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle5"><span id="ac5" class="absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(1)" id="inputCircle1"><span id="il1" class="il absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(2)" id="inputCircle2"><span id="il2" class="il absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(3)" id="inputCircle3"><span id="il3" class="il absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(4)" id="inputCircle4"><span id="il4" class="il absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(5)" id="inputCircle5"><span id="il5" class="il absolutee"></span></p>
+				<p id="timeText"></p>
+			</div></div>
+		</div></center>
+	</body>
+</html>
