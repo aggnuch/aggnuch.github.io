@@ -36,7 +36,7 @@ function hot() {
 	else {
 		highScore = Number(localStorage.getItem("aggnuch-limahan-highScore"));
 	}
-	if (localStorage.getItem("aggnuch-limahan-firstTime") == "true") {
+	if (localStorage.getItem("aggnuch-limahan-firstTime") != "true") {
 		firstTime = "true";
 		localStorage.setItem("aggnuch-limahan-firstTime","true");
 	}
