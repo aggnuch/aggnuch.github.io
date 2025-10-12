@@ -144,6 +144,65 @@ body, html {
 #menuHelp:hover { content:url("help-h.png"); }
 #menuPlay:hover, #menuStats:hover, #menuHelp:hover { cursor: pointer; }
 
+/* Stats */
+
+#statsField { display: none; }
+
+@media (min-width:320px) {
+	p#estad {
+		font-size: 7em;
+		font-weight: 700;
+		margin: 0.5em;
+	}
+	#statsTable {
+		width: 100%;
+		margin: 0px;
+		font-size: 3em;
+	}
+	#statsTable td {
+		padding: 0.5em 0px;
+		width: 50%;
+	}
+	
+	#statsBack {
+		bottom: 5em;
+		right: 5em;
+		width: 10em;
+		height: 10em;
+	}
+}
+
+@media (min-width:1281px) {
+	p#estad {
+		font-size: 60px;
+		font-weight: 700;
+		margin: 40px;
+	}
+	#statsTable {
+		width: 100%;
+		margin: 0px;
+		font-size: 30px;
+	}
+	#statsTable td {
+		padding: 10px 0px;
+		width: 50%;
+	}
+	
+	#statsBack {
+		top: 600px;
+		right: 30px;
+		width: 90px;
+		height: 90px;
+	}
+}
+
+p#estad { line-height: 1; }
+.statsB { font-weight: 700; }
+#statsTable td { text-align: center; }
+#statsBack { position: absolute; }
+#statsBack:hover { content:url("balik-h.png"); cursor: pointer; }
+
+
 /* Instructions */
 
 #instructionsField0 { display: none; }
@@ -166,8 +225,9 @@ body, html {
 		width: 75%;
 	}
 	p#panuto {
-		font-size: 8em;
+		font-size: 7em;
 		font-weight: 700;
+		margin: 0.5em;
 	}
 	.circleWordDemo {
 		width: 1.8em;
@@ -509,17 +569,6 @@ hr { background-color: black; }
 	font-weight: 700;
 	font-size: 40px;
 	display: none;
-}
-
-#pentagon {
-	position: absolute;
-	left: 190px;
-	top: 330px;
-	width: 360px;
-	height: 360px;
-	border-radius: 50%;
-	border: 20px solid yellow;
-	box-sizing: border-box;
 }
 
 #star {
