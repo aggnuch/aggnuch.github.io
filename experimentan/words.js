@@ -38,10 +38,11 @@ var tag_words = ["adobo","bibig","buhay"];
 
 /* Experiment Variables */
 
-var washed = false;
-var treat_language = "Tagalog";
-var treat_layout = "Circular";
-var treat_time = "Zero";
+var treatments = ["TCG-M","ZCG-M","ZLE-M","FCE-M","TCG-M","TLG-M","FCG-M","ZLG-M","ZCG-M","FLE-M","FCG-M","FLE-M","FCE-M","FLE-M","FCG-M","ZLG-M","TCG-M","TLG-M","TCE-M","TLE-M","ZCE-M","FLG-M","TLE-M","TCE-M","FLG-M","ZCE-M","ZCG-M","ZCE-M","TLG-M","TCE-M","ZLG-M","ZLE-M","FLG-M","FCE-M","ZLE-M","TLE-M","FCE-F","FLE-F","ZCG-F","ZLE-F","FCG-F","TLE-F","TCE-F","TLE-F","FLE-F","FCG-F","TLG-F","ZCE-F","TCE-F","TCG-F","ZCE-F","FCE-F","FLE-F","FCG-F","TLG-F","FLG-F","FCE-F","FLG-F","TCG-F","ZCG-F","FLG-F","TLE-F","ZLG-F","ZLG-F","ZLE-F","ZLE-F","ZCE-F","TCE-F","ZLG-F","TCG-F","TLG-F","ZCG-F"];
+var treatment_code = "";
+var treat_language = "";
+var treat_layout = "";
+var treat_time = "";
 var treat_circular = [
 	{"l":310,"t":355},
 	{"l":205,"t":455},
@@ -58,43 +59,12 @@ var treat_linear = [
 ]
 var treat_words = {"English":0,"Tagalog":0};
 var treat_duration = {"English":0,"Tagalog":0};
+var washed = false;
 
 function hot() {
 	screen_width = (window.innerWidth > 0) ? window.innerWidth : screen.width;
-	if (localStorage.getItem("aggnuch-limahan-highScore") == null) {
-		localStorage.setItem("aggnuch-limahan-highScore",0);
-	}
-	else {
-		highScore = Number(localStorage.getItem("aggnuch-limahan-highScore"));
-	}
-	if (localStorage.getItem("aggnuch-limahan-firstTime") == null) {
-		firstTime = "true";
-		localStorage.setItem("aggnuch-limahan-firstTime","true");
-	}
-	else {
-		firstTime = localStorage.getItem("aggnuch-limahan-firstTime");
-	}
-	if (localStorage.getItem("aggnuch-limahan-timeTaken") == null) {
-		localStorage.setItem("aggnuch-limahan-timeTaken",0);
-	}
-	else {
-		overallTime = Number(localStorage.getItem("aggnuch-limahan-timeTaken"));
-	}
-	if (localStorage.getItem("aggnuch-limahan-gamesTaken") == null) {
-		localStorage.setItem("aggnuch-limahan-gamesTaken",0);
-	}
-	else {
-		overallGames = Number(localStorage.getItem("aggnuch-limahan-gamesTaken"));
-	}
-	if (localStorage.getItem("aggnuch-limahan-wordsTaken") == null) {
-		localStorage.setItem("aggnuch-limahan-wordsTaken",0);
-	}
-	else {
-		overallWords = Number(localStorage.getItem("aggnuch-limahan-wordsTaken"));
-	}
 	xapol(eng_words,3000);
 	xapol(tag_words,3000);
-	/* startGame(); */
 	show("menuField");
 }
 
@@ -136,6 +106,35 @@ function gidle() {
 		startGame();
 	}
 	
+}
+
+function participate() {
+	hide("invalid");
+	hide("menuField");
+	show("participantField");
+}
+
+function process() {
+	participation = document.getElementById("participantNumber").value;
+	invalid = false;
+	if (isNaN(participation)) {
+		invalid = true;
+		show("invalid");
+	}
+	else {
+		if (participation > 72 || participation < 1) {
+			invalid = true;
+			show("invalid");
+		}
+	}
+	if (!invalid) {
+		hide("participantField");
+		treatment_code = treatments[participation-1];
+		if (treatment_code[0] == "Z") { treat_time = "Zero"; } else if (treatment_code[0] == "T") { treat_time = "Twenty"; } else if (treatment_code[0] == "F") { treat_time = "Forty"; }
+		if (treatment_code[1] == "C") {	treat_layout = "Circular"; } else if (treatment_code[1] == "L") { treat_layout = "Linear"; }
+		if (treatment_code[2] == "E") {	treat_language = "English"; } else if (treatment_code[2] == "G") { treat_language = "Tagalog"; }
+		startTutorial();
+	}
 }
 
 function startTutorial() {

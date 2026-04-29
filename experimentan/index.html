@@ -19,7 +19,7 @@
 						<p id="menuIyong">Stat 148 Experiment</p>
 						<b><p id="menuHSText"></p></b>
 					</div>
-					<img src="play.png" id="menuPlay" onclick="startTutorial()">
+					<img src="play.png" id="menuPlay" onclick="participate()">
 				</span>
 				</div>
 			</div>
@@ -33,6 +33,15 @@
 						<tr><td class="statsB">Overall time<br>(sec)</td><td id="timeEng">69</td><td id="timeTag">67</td></tr>
 					</table>
 					<p class="instructionP">DO NOT REFRESH THIS PAGE. Wait for the experimenters to attend to you.</p>
+				</span>
+			</div>
+			<div id="participantField">
+				<span class="absolutee">
+					<p class="instructionP">Enter the participant number below given to you by the experimenters.</p>
+					<p class="instructionP">Click DONE to proceed.</p>
+					<input id="participantNumber">
+					<p id="susunod" onclick="process()">DONE</p>
+					<p class="instructionP" id="invalid">Please enter a valid participant number</p>
 				</span>
 			</div>
 			<div id="instructionsField">

@@ -218,6 +218,30 @@ p#estad { line-height: 1; }
 #statsBack { position: absolute; }
 #statsBack:hover { content:url("balik-h.png"); cursor: pointer; }
 
+/* Participant Field */
+
+#participantField {
+	display: none;
+}
+
+#participantNumber {
+	font-family: Nunito;
+	text-align: center;
+	width: 15%;
+	padding: 25px 30px;
+	font-size: 42px;
+}
+
+#participantField p {
+	font-size: 36px;
+	width: 75%;
+	line-height: 1;
+}
+
+#invalid {
+	color: #ff3333;
+	font-size: 24px !important;
+}
 
 /* Instructions */
 
