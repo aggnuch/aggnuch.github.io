@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+	<head>
+		<title>Stat 148 Experiment</title>
+		<link rel="stylesheet" href="words.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+		<link rel="icon" type="image/x-icon" href="favicon.png">
+		<meta name="viewport" content="user-scalable=no" />
+		<script src="words.js"></script>
+	</head>
+	<body onload="hot()">
+		<center><div id="levelHolderField">
+			<div id="menuField">
+				<div id="menuBackground">
+				<span class="absolutee">
+					<p class="menuTitle"><span class="letter">LIMAH</span>AN</p>
+					<div id="menuHighScore">
+						<p id="menuIyong">Stat 148 Experiment</p>
+						<b><p id="menuHSText"></p></b>
+					</div>
+					<img src="play.png" id="menuPlay" onclick="startTutorial()">
+				</span>
+				</div>
+			</div>
+			<div id="statsField">
+				<span class="absolutee">
+					<p id="estad">CONGRATULATIONS!</p>
+					<p class="instructionP">Below is a summary of your play.</p>
+					<table id="statsTable">
+						<tr><td class="statsB" style="width:40%"></td><td class="statsB">English</td><td class="statsB">Tagalog</td></tr>
+						<tr><td class="statsB">Words made</td><td id="wordsEng">69</td><td id="wordsTag">67</td></tr>
+						<tr><td class="statsB">Overall time<br>(sec)</td><td id="timeEng">69</td><td id="timeTag">67</td></tr>
+					</table>
+					<p class="instructionP">DO NOT REFRESH THIS PAGE. Wait for the experimenters to attend to you.</p>
+				</span>
+			</div>
+			<div id="instructionsField">
+				<div id="instructionsField0"><span class="absolutee">
+					<p id="panuto">INSTRUCTIONS</p>
+					<p class="instructionP">This game is simple!</p>
+					<p class="instructionP">Make five-letter words in English and Tagalog.</p>
+					<p class="instructionP">From the letters given below, can you form an English word? All letters should be used up for the word.</p>
+					<p class="instructionP">Think about the answer now, but later on you have to click on the letters to make your answer.</p>
+					<div class="circleWordDemo demo1"><span class="absolutee">R</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">A</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">N</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">B</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">I</span></div>
+					<p class="instructionP">Got it? Press "Next" below.</p>
+					<p id="susunod" onclick="gidle()">Next</p></span>
+				</div>
+				<div id="instructionsField1"><span class="absolutee">
+					<p id="panuto">INSTRUCTIONS</p>
+					<p class="instructionP">Hope you got the correct answer. The answer is:</p>
+					<div class="circleWordDemo demo1"><span class="absolutee">B</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">R</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">A</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">I</span></div>
+					<div class="circleWordDemo demo1"><span class="absolutee">N</span></div>
+					<p class="instructionP">Easy, right? Press "Next" below.</p>
+					<p id="susunod" onclick="gidle()">Next</p></span>
+				</div>
+				<div id="instructionsField2"><span class="absolutee">
+					<p id="panuto">INSTRUCTIONS</p>
+					<b><p class="instructionP" id="instructionTime"></p></b>
+					<p class="instructionP">If you pressed the wrong letter while forming a word, you can press one of the five circles later on to form a new word.</p>
+					<p class="instructionP"><b>You will first play the game in <span id="instructionLang"></span></b>. You will then play in another language once you are done with this.</p>
+					<p class="instructionP">Got it? You can start the game now! Good luck!</p>
+					<p class="instructionP">Press "Next" below to proceed.</p>
+					<p id="susunod" onclick="gidle()">Next</p></span>
+				</div>
+				<div id="instructionsFieldWash"><span class="absolutee">
+					<p id="panuto">INSTRUCTIONS</p>
+					<p class="instructionP"><b>You are about to play the game in <span id="instructionWashLang1"></span></b>. This means you now have to form <span id="instructionWashLang2"></span> words.</p>
+					<p class="instructionP">The same instructions apply as in the previous game.</p>
+					<p class="instructionP">Click "Next" below to start the next game!</p>
+					<p id="susunod" onclick="gidle()">Next</p></span>
+				</div>
+			</div>
+			<div id="gameOverField">
+				<span class="absolutee">
+					<p id="cocoMartin">FINISH!</p>
+					<span id="gameOverSayang">
+					<p id="pwedeNa">You could have made the word:</p>
+						<p class="siritCircle" id="siritCircle1"><span id="sc1" class="absolutee">A</span></p>
+						<p class="siritCircle" id="siritCircle2"><span id="sc2" class="absolutee">A</span></p>
+						<p class="siritCircle" id="siritCircle3"><span id="sc3" class="absolutee">A</span></p>
+						<p class="siritCircle" id="siritCircle4"><span id="sc4" class="absolutee">A</span></p>
+						<p class="siritCircle" id="siritCircle5"><span id="sc5" class="absolutee">A</span></p>
+					</span>
+					<span id="gameOverAccomplish">
+						<p id="pwedeNa">You completed all 50 words! Good job!</p>
+					</span>
+					<hr id="iskorHr">
+					<p id="iskorText">Iskor</p>
+					<p id="iskor">0</p>
+					<span id="gameOverWash">
+						<img src="play.png" id="menuPlay" onclick="wash()">
+					</span>
+				</span>
+			</div>
+			<div id="playingField">
+				<p id="score">0</p>
+				<img src="time.png" id="timeIcon">
+				<div id="timeShape"></div>
+				<img src="heart.png" class="life" id="life1">
+				<img src="heart.png" class="life" id="life2">
+				<img src="heart.png" class="life" id="life3">
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle1"><span id="ac1" class="absolutee"></span></p>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle2"><span id="ac2" class="absolutee"></span></p>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle3"><span id="ac3" class="absolutee"></span></p>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle4"><span id="ac4" class="absolutee"></span></p>
+				<p class="answerCircle" onclick="resetAnswer()" id="answerCircle5"><span id="ac5" class="absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(1)" id="inputCircle1"><span id="il1" class="il absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(2)" id="inputCircle2"><span id="il2" class="il absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(3)" id="inputCircle3"><span id="il3" class="il absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(4)" id="inputCircle4"><span id="il4" class="il absolutee"></span></p>
+				<p class="inputCircle" onclick="forma(5)" id="inputCircle5"><span id="il5" class="il absolutee"></span></p>
+				<p id="timeText"></p>
+			</div></div>
+		</div></center>
+	</body>
+</html>
