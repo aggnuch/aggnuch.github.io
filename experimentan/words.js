@@ -33,8 +33,8 @@ var answerAnim = new Array(5);
 var screen_width = 0;
 var inst = 0;
 
-var eng_words = ["about","adult","basic"];
-var tag_words = ["adobo","bibig","buhay"];
+var eng_words = ["grand","brick","yeast","proud","rapid","queue","claim","gusty","flock","faded","watch","cling","water","mouse","prime","music","drink","build","lyric","blush","faint","chair","waltz","legal","voice","clock","grind","marks","chick","cramp","quick","cards","write","colon","blind","light","necks","photo","adapt","width","flown","motto","bound","panda","pilot","sorry","block","flask","phone","broke"];
+var tag_words = ["hiram","ligaw","libot","mulat","lubos","lahat","pilay","pulot","himay","kanan","sabon","pagod","tipid","kamay","bibig","lapis","balde","kulay","rosas","kahel","bahay","likod","hayop","lamok","hinga","kilig","buhay","gamit","giliw","sigaw","titik","ganda","munti","alaga","bakod","dapat","bukid","tulog","mundo","sabay","libro","kanin","dagat","gamot","barya","tatay","nanay","bukas","dahon","sinta"];
 
 /* Experiment Variables */
 
